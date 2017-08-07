@@ -1,0 +1,857 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style type="text/css">
+		*{
+			margin:0;
+			padding:0;
+		}
+		input{
+			outline: none;
+		}
+		li{
+			list-style: none;
+		}
+		a{
+			text-decoration: none;
+		}
+		body{
+			min-width: 1339px;
+		}
+		.mian:after{
+			content: "";
+			height: 0;
+			line-height: 0;
+			visibility: hidden;
+			display: block;
+			clear: both;
+		}
+		.mian{
+			background-color: #FAE8C8;
+		}
+		.top{
+			height: 50px;
+			background-color: #E9E8E8;
+		}
+		.top-1{
+			width: 1000px;
+			height: 50px;
+			margin:0 auto;
+			
+		}
+		.top-1 p{
+			font:bold 15px/50px "微软雅黑";
+		}
+		.find{
+			height: 100px;
+			background-color: #C70202;
+		}
+		.find .find-1{
+			height: 100px;
+			width: 1000px;
+			margin:0 auto;
+		}
+		.find-1 .image{
+			float: left;
+		}
+		.find-1 input{
+			float: left;
+			width: 244px;
+			height: 30px;
+			margin-left:36px;
+			margin-top: 34px;
+			border-style: none;
+		}
+		.find-1 span{
+			float: left;
+			width: 58px;
+			height: 28px;
+			background-color: #FF0000;
+			margin-top: 34px;
+			border:1px solid white;
+			text-align: center;
+			line-height: 28px;
+			color: white;
+			font-size: 15px;
+		}
+		.find-1 a{
+			float: right;
+			margin-top: 34px;
+			line-height: 28px;
+			margin-left: 29px;
+			font-size: 12px;
+			color: white;
+		}
+		.find-1 #tba{
+			margin-left: 0px;
+		}
+		.find-1 #tbaq{
+			margin-left: 5px;
+		}
+		.find-1 #tbb{
+			margin-top: 38px;
+		}
+		.nav{
+			height: 77px;
+			background-color: #FFFFFF;
+		}
+		.nav-1{
+			width: 1000px;
+			height: 77px;
+			margin:0 auto;
+		}
+		.nav-1 li{
+			float: left;
+			font:18px/77px "微软雅黑";
+			font-weight:700;
+			margin-right: 20px;
+		}
+		.nav-1 li a{
+			color: #000000;
+		}
+		.nav-1 li a:hover{
+			color:#008000;
+		}
+		.today{
+			height: 82px;
+			background-color: #FAE8C8;
+			text-align: center;
+		}
+		.today h2{
+			font: 25px/82px "微软雅黑";
+			font-weight: 900;
+		}
+
+		.food{
+			height: 273px;
+			width: 25%;
+			float: left;
+			background-repeat: no-repeat;
+			background-position: center 40%;
+			background-size: cover;
+			position: relative;
+		}
+		.food-1{
+			background-image:url(image/strawberry.png);
+			background-position: center 70%;	
+
+		}
+		.food-2{
+			background-image: url(image/dumplings.png);
+		}
+		.food-3{
+			background-image: url(image/zongzi.png);
+		}
+		.food-4{
+			background-image: url(image/lunch.png);
+			background-position: center 54%;	
+		}
+		.beizhu{
+			height:63px;
+			background-color: rgba(255,255,255,.5);
+			margin-top: 210px;
+		}
+		.beizhu h3,p{
+			margin-left: 13px;
+			font-family: "微软雅黑";
+		}
+		.beizhu h3{
+			width: 120px;
+			padding-top: 4px;
+			text-overflow: ellipsis;
+			overflow: hidden;
+			white-space: nowrap;
+
+		}
+		.beizhu p{
+			width: 280px;
+			text-overflow: ellipsis;
+			overflow: hidden;
+			white-space: nowrap;
+			margin-top: 6px;
+			font-weight: bold;
+		}
+		.tt{
+			float: left;
+			width: 107px;
+			height: 42px;
+			background-color: #60A531;
+			color: white;
+			text-align: center;
+			font:16px/42px "微软雅黑";
+			position:absolute;
+			right: 7px;
+			bottom:48px;
+		}
+		.food .tt2{
+			width: 145px;
+			height: 77px;
+			background-color: rgba(0,0,0,0.1);
+			position: absolute;
+			top:74px;
+			left: 94px;
+			text-align: center;
+		}
+		.tt2 div{
+			float: left;
+			color: white;
+		}
+		.tt2 div h3{
+			margin-top: 20px;
+		}
+		.tt2 img{
+			margin-top: 14px;
+		}
+		.food .tt3{
+			width: 145px;
+			height: 77px;
+			background-color: rgba(0,0,0,0.1);
+			position: absolute;
+			top:85px;
+			left: 75px;
+			text-align: center;
+		}
+		.tt3 div{
+			color: white;
+		}
+		.tt3 div h3{
+			margin-top: 20px;
+		}
+		.tt3 img{			
+			float: left;
+		}
+		.find2{
+			height: 99px;
+			margin-top: 3px;
+			background-color: #3F3A32;
+			border-top: 1px solid #3F3A32;
+		}
+		.find2 .find2-in{
+			width: 727px;
+			height: 77px;
+			margin:0 auto;
+			margin-top: 12px;
+			background-color: red;
+		}
+		.find2-in input{
+			width: 555px;
+			height: 77px;
+			border:none;
+			font-size: 20px;
+		}
+		.find2-in span{
+			display: inline-block;
+			height: 77px;
+			font-size: 20px;
+			font-family: "微软雅黑";
+			text-indent: 3em;
+			color: white;
+		}
+		.biaoti{
+			height: 77px;
+			text-align: center;
+		}
+		.biaoti h3{
+			font-family: "微软雅黑";
+			line-height: 77px;
+			font-size: 28px;
+		}
+		.num{
+			height: 260px;
+		}
+		.num .num1{
+			height: 260px;
+			width: 1002px;
+			margin:0 auto;
+			padding: 0 56px 0 64px;
+			/*background-color: yellow;*/
+			position: relative;
+		}
+		.left{
+			width: 30px;
+			height: 98px;
+			float: left;
+			background: url(image/zuo.fw.png) no-repeat;
+			position: absolute;
+			top:50%;margin-top:-49px;left: 0px;
+		}
+		.right{
+			width: 30px;
+			height: 98px;
+			float: right;
+			background: url(image/you.fw.png) no-repeat;
+			position: absolute;
+			right:0px;top:50%;margin-top:-49px;
+		}
+		.num1 .middle{
+			width: 334px;
+			height: 260px;
+			float: left;
+			position: relative;
+		}
+		.num1 .tp1{
+			background: url(image/未命名-5.fw.png) no-repeat;
+		}
+		.num1 .tp2{
+			background: url(image/未命名-6.fw.png) no-repeat;
+		}
+		.num1 .tp3{
+			background: url(image/未命名-7.fw.png) no-repeat;
+		}
+		.middle .middle-in{
+			width: 334px;
+			height: 57px;
+			position: absolute;
+			bottom: 0px;
+			background-color: white;
+		}
+		.middle-in h3{
+			margin-top: 8px;
+			margin-left: 12px;
+		}
+		#biaoti{
+			margin-top: 15px;
+		}
+		.ft{
+			width: 1008px;
+			height: 208px;
+			margin:0 auto;
+			background-color: white;
+			position: relative;
+		}
+		.ft .small{
+			width: 168px;
+			height: 208px;
+			float: left;
+			background-position: center;
+			background-repeat: no-repeat;
+		}
+		.ft .small1{
+			background-image: url(image/未命名-8.fw.png);
+		}
+		.ft .small2{
+			background-image: url(image/未命名-9.fw.png);
+		}
+		.ft .small3{
+			background-image: url(image/未命名-10.fw.png);
+		}
+		.ft .small4{
+			background-image: url(image/未命名-11.fw.png);
+		}
+		.ft .small5{
+			background-image: url(image/未命名-12.fw.png);
+		}
+		.ft .small6{
+			background-image: url(image/未命名-13.fw.png);
+		}
+		.ft-tt{
+			position: absolute;
+		}
+		.ft-tt li{
+			float: left;
+			width: 103px;
+			height: 42px;
+			text-align: center;
+			
+		}
+		.ft-tt li a{
+			display: inline-block;
+			line-height: 42px;
+			width: 103px;
+			height: 42px;
+			color:black;
+			font-size: 18px;
+		}
+		.ft-tt li a:hover{
+			background-color: red;
+			color: white;
+		}
+		.bf-tt{
+			width: 1001px;
+			height: 77px;
+			margin:0 auto;
+			position: relative;
+		}
+		.bf-tt h3{
+			font-family: "微软雅黑";
+			line-height: 77px;
+			font-size: 28px;
+			position: absolute;
+			left:40%;
+		}
+		.bf-tt h4{
+			font-family: "微软雅黑";
+			line-height: 77px;
+			font-size: 22px;
+			float: right;
+		}
+		.bf{
+			width: 1001px;
+			height: 377px;
+			margin:0 auto;
+			position: relative;
+			/*background-color: red;*/
+		}
+		.bf .num{
+			width: 333px;
+			height: 377px;
+			float: left;
+			background-repeat: no-repeat;
+		}
+		.bf .num1{
+			background-image: url(image/未命名-14.fw.png);
+		}
+		.bf .num2{
+			background-image: url(image/未命名-15.fw.png);
+			margin:0 1px;
+		}
+		.bf .num3{
+			background-image: url(image/未命名-16.fw.png);
+		}
+		.bf .num1-1{
+			height: 146px;
+			margin-top: 232px;
+			
+		}
+		.bf .num1-1 h1{
+			margin-left: 24px;
+			line-height: 70px;
+			font-family: "微软雅黑";
+			font-weight: 500;
+		}
+		.bf .num1-1 p{
+			margin-left: 23px;
+			margin-top: 26px;
+			color: #B3B3B3;
+		}
+		.bf .num4{
+			background-image: url(image/未命名-17.fw.png);
+		}
+		.bf .num5{
+			background-image: url(image/未命名-18.fw.png);
+			margin:0 1px;
+		}
+		.bf .num6{
+			background-image: url(image/未命名-19.fw.png);
+		}
+		.fenge{
+			height: 35px;
+		}
+		.bf .num7{
+			background-image: url(image/未命名-20.fw.png);
+		}
+		.bf .num8{
+			background-image: url(image/未命名-21.fw.png);
+			margin:0 1px;
+		}
+		.bf .numtb{
+			width: 333px;
+			height: 377px;
+			float: left;
+			background-color: white;
+		}
+		.numtb h2{
+			font-family: "微软雅黑";
+			line-height: 47px;
+			text-indent: 1em;
+			border-bottom: 3px solid #B9B9B9;
+		}
+		.numtb a{
+			display: inline-block;
+			width: 91px;
+			height: 39px;
+			background-color: #EEEEEE;
+			border:3px solid #B9B9B9;
+			margin:16px 0 0 12px;
+			text-align: center;
+			font:20px/39px "微软雅黑";
+			color: black;
+		}
+		.numtb #numtb{
+			display: inline-block;
+			width: 251px;
+			height: 58px;
+			background-color: red;
+			border:none;
+			color: white;
+			line-height: 58px;
+		}
+		.left1{
+			width: 30px;
+			height: 98px;
+			float: left;
+			background: url(image/zuo.fw.png) no-repeat;
+			position: absolute;
+			top:50%;margin-top:-49px;left: -60px;
+		}
+		.right1{
+			width: 30px;
+			height: 98px;
+			float: right;
+			background: url(image/you.fw.png) no-repeat;
+			position: absolute;
+			right:-60px;top:50%;margin-top:-49px;
+		}
+		.new{
+			width: 1005px;
+			height: 146px;
+			margin:0 auto;
+			/*background-color: yello*/w;
+		}
+		.new .new1,.new2{
+			width: 497px;
+			height: 146px;
+			float: left;
+			background-color: white;
+		}
+		.new .new2{
+			margin-left: 11px;
+		}
+		.new img{
+			float: left;
+		}
+		.new p{
+			color: #858585;
+			line-height: 48px;
+			text-indent: 0.5em;
+		}
+		.new .tbp{
+			font-size: 18px;
+			color:black;
+			border-top:1px solid #DEDEDE;
+			border-bottom:1px solid #DEDEDE;
+		}
+		.bottom{
+			border-top:1px solid  #2F2F2F;
+			height: 314px;
+			background-color: #2F2F2F;
+			margin-top: 23px;
+		}
+		.bottom .content{
+			width: 1339px;
+			height: 281px;
+			margin:0 auto;
+			margin-top:11px;
+			background: url(image/未命名24.fw.png) no-repeat;
+		}
+		.bottom .content .content1{
+			width: 511px;
+			height: 241px;
+			margin-left: 170px;
+		/*	background-color: pink;*/
+			float: left;
+			margin-top: 40px;
+		}
+		.content .content1 p{
+			color: #B7B7B7;
+			line-height: 32px;
+		}
+		.content .content1 .span1{
+			color: #C83131;
+			font-size: 18px;
+		}
+		.content .content1 .span2{
+			font-size: 19px;
+		}
+		.content .content2{
+			width: 500px;
+			height: 154px;
+			float: left;
+		/*	background-color: red;*/
+			margin-top: 30px;
+		}
+		.content2 .content2-1{
+			width: 105px;
+			height: 154px;
+			float: left;
+			margin-right: 20px;
+			/*background-color: green;*/
+			text-align: center;
+		}
+		.content #tb1{
+			margin-right: 0px;
+		}
+		.content #tb2{
+			margin:0px;
+			width: 145px;
+		}
+		.content2-1 p{
+			font-size: 12px;
+			color: #666666;
+			margin-top: 4px;
+			line-height: 10px;
+			margin-left: -4px;
+		}
+	</style>
+</head>
+<body>
+	<div class="mian">
+		
+		<div class="top">
+			<div class="top-1"><p>您好，欢迎来到美食杰网！</p></div>
+		</div>
+
+		<div class="find">
+			<div class="find-1">
+				<img src="image/logo.png" alt="" class="image">				
+				<input type="text" placeholder="请输入菜谱/食材/菜单"><span>搜索</span>
+				<a href="">登录</a>
+				<a href="">注册</a>
+				<a href="" id="tba">微博登录</a>
+				<a href="" id="tbb"><img src="image/sina.png" alt=""></a>
+				<a href="" id="tbaq">QQ登录</a>
+				<a href="" id="tbb"><img src="image/QQ.png" alt=""> </a>
+			</div>
+		</div>
+		
+		<div class="nav">
+			<div class="nav-1">
+				<ul>
+					<li><a href="#">首页</a></li>
+					<li><a href="#">菜谱大全</a></li>
+					<li><a href="#">饮食健康</a></li>
+					<li><a href="#">家居馆</a></li>
+					<li><a href="#">美食达人</a></li>
+					<li><a href="#">讨论组</a></li>
+					<li><a href="#">手机版下载</a></li>
+				</ul>
+			</div>
+		</div>
+		
+		<div class="today">
+			<h2>今日早餐推荐：给亲爱的TA做元气满满的早餐吧</h2>
+		</div>
+
+		<div style="height:273px">
+			<div class="food food-1">
+			<div class="tt">补充能量</div>
+			<div class="beizhu">
+				<h3>美味面包片</h3>
+				<p>草莓面包片，营养双管齐下</p>
+			</div>
+			<div class="tt2">
+				<div>
+				<h3>夜宵</h3>
+				<p>10.00-14.00</p>
+				</div>
+				<img src="image/yue.fw.png" alt="">
+			</div>
+			</div>
+			<div class="food food-2">
+			<div class="tt">营养均衡</div>
+			<div class="beizhu">
+				<h3>香煎大馄钝</h3>
+				<p>咸香的味道在味蕾中绽放</p>
+			</div>
+			</div>
+			<div class="food food-3">
+			<div class="tt">益智补脑</div>
+			<div class="beizhu">
+				<h3>粽子</h3>
+				<p>美味的粽子，好吃的同时还能吃出情怀</p>
+			</div>
+			</div>
+			<div class="food food-4">
+			<div class="tt">维生素</div>
+			<div class="beizhu">
+				<h3>冰沙杯橙汁混合</h3>
+				<p>冷冻芒果，菠萝，很多草莓，配上麦片，生冷冻</p>
+			</div>
+			<div class="tt3">
+				<div>
+				<img src="image/ri.fw.png" alt="">
+				<h3>午餐</h3><p>10.00-14.00</p>
+				</div>
+			</div>
+			</div>
+		</div>
+		
+		<div class="find2">
+			<div class="find2-in">
+				<input type="text" placeholder="&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;请输入菜谱、食材">
+				<span>搜索</span>
+			</div>
+		</div>	
+
+		<div class="biaoti">
+				<h3>5月，立夏须养心</h3>	
+		</div>	
+
+		<div class="num">
+			<div class="num1">
+				<div class="left"></div>				
+				<div class="middle tp1">
+					<div class="middle-in">
+						<h3>四月水果当季尝</h3>
+						<p>你舍得错过当季这些甜美的果实吗？</p>
+					</div>
+				</div>
+				<div class="middle tp2">
+					<div class="middle-in">
+						<h3>鲜花菜肴</h3>
+						<p>来，让人间芬芳--开遍你的餐桌</p>
+					</div>
+				</div>
+				<div class="middle tp3">
+					<div class="middle-in">
+						<h3>中式下午茶</h3>
+						<p>理想的下午，在家喝出女王范</p>
+					</div>
+				</div>
+				<div class="right"></div>
+			</div>
+		</div>
+
+		<div class="biaoti" id="biaoti">
+				<h3>5月，健脾祛湿热</h3>	
+		</div>
+
+		<div class="ft">
+			<div class="small small1"></div>
+			<div class="small small2"></div>
+			<div class="small small3"></div>
+			<div class="small small4"></div>
+			<div class="small small5"></div>
+			<div class="small small6"></div>
+			<div class="ft-tt">
+				<ul>
+					<li><a href="#">水果</a></li>
+					<li><a href="#">蔬菜</a></li>
+					<li><a href="#">五谷</a></li>
+					<li><a href="#">生鲜</a></li>
+				</ul>
+			</div>
+		</div>
+
+		<div class="bf-tt">
+				<h4>最热：一小时 今日 七天 更多菜谱 &gt;</h4>
+				<h3>最新菜谱</h3>
+		</div>
+
+		<div class="bf">
+				<div class="num num1">
+					<div class="num1-1">
+						<h1>菲力牛排套餐</h1>
+						<p>6人评价&nbsp;1262人气</p>
+					</div>
+				</div>
+				<div class="num num2">
+					<div class="num1-1">
+						<h1>蒸排骨</h1>
+						<p>6人评价&nbsp;1262人气</p>
+					</div>
+				</div>
+				<div class="num num3">
+					<div class="num1-1">
+						<h1>烤翅</h1>
+						<p>6人评价&nbsp;1262人气</p>
+					</div>
+				</div>
+			</div>	
+
+			<div class="fenge"></div>
+
+<!-- 复制1 --><div class="bf">
+				<div class="left1"></div>
+				<div class="right1"></div>
+				<div class="num num4">
+					<div class="num1-1">
+						<h1>绿茶烤肉</h1>
+						<p>6人评价&nbsp;1262人气</p>
+					</div>
+				</div>
+				<div class="num num5">
+					<div class="num1-1">
+						<h1>糖醋排骨</h1>
+						<p>6人评价&nbsp;1262人气</p>
+					</div>
+				</div>
+				<div class="num num6">
+					<div class="num1-1">
+						<h1>烤鱼</h1>
+						<p>6人评价&nbsp;1262人气</p>
+					</div>
+				</div>
+			</div>	
+
+			<div class="fenge"></div>
+		
+<!-- 复制二 --><div class="bf">
+				<div class="num num7">
+					<div class="num1-1">
+						<h1>椒盐虾</h1>
+						<p>6人评价&nbsp;1262人气</p>
+					</div>
+				</div>
+				<div class="num num8">
+					<div class="num1-1">
+						<h1>日式鸡肉丸</h1>
+						<p>6人评价&nbsp;1262人气</p>
+					</div>
+				</div>
+				<div class="numtb">
+					<h2>热门栏目推荐</h2>
+					<a href="#">最新菜谱</a><a href="#">家常菜</a><br>
+					<a href="#">凉菜</a><a href="#">素食</a><a href="#">素食</a><br>
+					<a href="">韩国料理</a><a href="">川菜</a><br>
+					<a href="">粤菜</a><a href="">湘菜</a><a href="#">甜点</a><br>
+					<a href="#" id="numtb">进入菜谱大全&gt;&gt;</a>
+				</div>
+			</div>	
+		
+			<div class="biaoti">
+				<h3>健康新闻</h3>	
+			</div>
+
+			<div class="new">
+				<div class="new1">
+					<img src="image/未命名-22.fw.png" alt="">
+					<p>鱼现杀吃存在健康隐患</p>
+					<p class="tbp">黄焖鸡米饭出事了，还能吃吗？</p>
+					<p>当心！5种食物不能微波炉反复加热</p>
+				</div>
+				<div class="new2">
+				 	<img src="image/未命名-23.fw.png" alt="">
+				 	<p>有讲究调味四君子，搭配</p>
+					<p class="tbp">吃面食容易发胖吗</p>
+					<p>晚上7点后慎吃这几种食物</p>
+				</div>
+			</div>
+
+			<div class="bottom">
+				<div class="content">
+					<div class="content1">
+						<p>中国，最大的菜谱库 <span class="span1">800,000</span> <span class="span2">篇</span></p>
+						<p>每月，用户访问量 <span class="span1">20,000,000</span> <span class="span2">次</span></p>
+						<p>每月，菜谱被浏览量 <span class="span1">36，000,000,000</span> <span class="span2">次</span></p>
+						<p>现在，这些数字还在不断的增长着，欢迎您来一起使用美食美刻</p>
+					</div>
+					<div class="content2">
+						<div class="content2-1">
+							<img src="image/未命名-25.fw.png" alt="">
+							<p>点击进入</p>
+							<p>爱美食网微博官网</p>
+						</div>
+						<div class="content2-1">
+							<img src="image/未命名-26.fw.png" alt="">
+							<p>点击进入</p>
+							<p>爱美食QQ空间</p>
+						</div>
+						<div class="content2-1" id="tb1">
+							<img src="image/未命名-27.fw.png" alt="">
+							<p>扫二维码添加</p>
+							<p>爱美食微信好友</p>
+						</div>
+						<div class="content2-1" id="tb2">
+							<img src="image/未命名-28.fw.png" alt="">
+							<p>扫二维码添加</p>
+							<p>下载吗爱美食手机客户端</p>
+						</div>
+					</div>
+				</div>
+			</div>
+	</div><!-- mian结束 -->
+</body>
+</html>

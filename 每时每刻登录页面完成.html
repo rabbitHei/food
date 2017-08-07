@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style type="text/css">
+		*{
+			margin:0;
+			padding:0;
+			font-family: "微软雅黑";
+		}
+		input{
+			outline-style: none;
+		}
+		li{
+			list-style: none;
+		}
+		a{
+			text-decoration: none;
+		}
+		body{
+			min-width: 1339px;
+		}
+		.mian:after{
+			content: "";
+			height: 0;
+			line-height: 0;
+			visibility: hidden;
+			display: block;
+			clear: both;
+		}
+		.mian{
+			background-color: #FAE8C8;
+		}
+		.top{
+			height: 50px;
+			background-color: #E9E8E8;
+		}
+		.top-1{
+			width: 1000px;
+			height: 50px;
+			margin:0 auto;
+			
+		}
+		.top-1 p{
+			font:bold 15px/50px "微软雅黑";
+		}
+		.find{
+			height: 100px;
+			background-color: #C70202;
+		}
+		.find .find-1{
+			height: 100px;
+			width: 1000px;
+			margin:0 auto;
+		}
+		.find-1 .image{
+			float: left;
+		}
+		.find-1 input{
+			float: left;
+			width: 244px;
+			height: 30px;
+			margin-left:36px;
+			margin-top: 34px;
+			border-style: none;
+		}
+		.find-1 span{
+			float: left;
+			width: 58px;
+			height: 28px;
+			background-color: #FF0000;
+			margin-top: 34px;
+			border:1px solid white;
+			text-align: center;
+			line-height: 28px;
+			color: white;
+			font-size: 15px;
+		}
+		.find-1 a{
+			float: right;
+			margin-top: 34px;
+			line-height: 28px;
+			margin-left: 29px;
+			font-size: 12px;
+			color: white;
+		}
+		.find-1 #tba{
+			margin-left: 0px;
+		}
+		.find-1 #tbaq{
+			margin-left: 5px;
+		}
+		.find-1 #tbb{
+			margin-top: 38px;
+		}
+		.nav{
+			height: 77px;
+			background-color: #FFFFFF;
+		}
+		.nav-1{
+			width: 1000px;
+			height: 77px;
+			margin:0 auto;
+		}
+		.nav-1 li{
+			float: left;
+			font:18px/77px "微软雅黑";
+			font-weight:700;
+			margin-right: 20px;
+		}
+		.nav-1 li a{
+			color: #000000;
+		}
+		.nav-1 li a:hover{
+			color:#008000;
+		}
+		.bottom{
+			border-top:1px solid  #2F2F2F;
+			height: 314px;
+			background-color: #2F2F2F;
+			margin-top: 23px;
+		}
+		.bottom .content{
+			width: 1339px;
+			height: 281px;
+			margin:0 auto;
+			margin-top:11px;
+			background: url(image/未命名24.fw.png) no-repeat;
+		}
+		.bottom .content .content1{
+			width: 511px;
+			height: 241px;
+			margin-left: 170px;
+		/*	background-color: pink;*/
+			float: left;
+			margin-top: 40px;
+		}
+		.content .content1 p{
+			color: #B7B7B7;
+			line-height: 32px;
+		}
+		.content .content1 .span1{
+			color: #C83131;
+			font-size: 18px;
+		}
+		.content .content1 .span2{
+			font-size: 19px;
+		}
+		.content .content2{
+			width: 500px;
+			height: 154px;
+			float: left;
+		/*	background-color: red;*/
+			margin-top: 30px;
+		}
+		.content2 .content2-1{
+			width: 105px;
+			height: 154px;
+			float: left;
+			margin-right: 20px;
+			/*background-color: green;*/
+			text-align: center;
+		}
+		.content #tb1{
+			margin-right: 0px;
+		}
+		.content #tb2{
+			margin:0px;
+			width: 145px;
+		}
+		.content2-1 p{
+			font-size: 12px;
+			color: #666666;
+			margin-top: 4px;
+			line-height: 10px;
+			margin-left: -4px;
+		}
+		.denglu{
+			width: 1018px;
+			height: 620px;
+			margin:0 auto;
+			margin-top: 85px;
+		}
+		.denglu .denglu-img{
+			width: 537px;
+			height: 620px;
+			float: left;
+			background: url(image/未命名-4.fw.png) no-repeat 6px 0px;
+		}
+		.denglu .denglu-in{
+			width: 467px;
+			height: 620px;
+			float: left;
+			background-color: white;
+			padding-left: 14px;
+		}
+		.denglu-in h1{
+			font-weight: 400;
+			text-indent: 1em;
+			margin-top: 26px;
+		}
+		.denglu-in .input1{
+			width: 446px;
+			height: 58px;
+			border:2px solid #C4C4C4;
+			margin-top: 38px;
+		}
+		.denglu-in .input1 img{
+			float: left;
+		}
+		.denglu-in .input1 input{
+			float: left;
+			height: 58px;
+			width: 392px;
+			border:none;
+			font-size: 20px;
+		}
+		.text1{
+			width: 448px;
+			height: 28px;
+			margin-top: 35px;
+		}
+		.text1  img{
+			vertical-align: middle;
+		}
+		.text1 a{
+			color: #585858;
+			font-size:18px;	
+		}
+		.text1 .atb{
+			float: right;
+		}
+		.niu{
+			width: 448px;
+			height: 62px;
+			background-color: #E60012;
+			margin-top: 39px;
+			text-align: center;
+		}
+		.niu a{
+			font-size: 20px;
+			color: white;
+			line-height: 62px;
+		}
+		.aaa{
+			color: #5D5C5D;
+			display: inline-block;
+			font-size: 18px;
+			margin-top: 65px;
+		}
+		.ditt{
+			width: 448px;
+			height: 36px;
+			/*background-color: red;*/
+			margin-top: 33px;
+		}
+		.ditt a{
+			float: left;
+			color: #61668F;
+			margin-top: 8px;
+		}
+		.ditt .tbaa{
+			float: right;
+			
+		}
+		.ditt  .tbaa img{
+			vertical-align: middle;
+		}
+		.ditt .tbab{
+			margin-left: 60px;
+		}
+	</style>
+</head>
+<body>
+	<div class="mian">
+		
+		<div class="top">
+			<div class="top-1"><p>您好，欢迎来到美食杰网！</p></div>
+		</div>
+
+		<div class="find">
+			<div class="find-1">
+				<img src="image/logo.png" alt="" class="image">				
+				<input type="text" placeholder="请输入菜谱/食材/菜单"><span>搜索</span>
+				<a href="">登录</a>
+				<a href="">注册</a>
+				<a href="" id="tba">微博登录</a>
+				<a href="" id="tbb"><img src="image/sina.png" alt=""></a>
+				<a href="" id="tbaq">QQ登录</a>
+				<a href="" id="tbb"><img src="image/QQ.png" alt=""> </a>
+			</div>
+		</div>
+		
+		
+		
+<!-- 起始位置 -->
+		<div class= "denglu">
+			<div class="denglu-img"></div>
+			<div class="denglu-in">
+				<h1>美食美刻</h1>
+				<div class="input1">
+					<img src="image/美食美刻-登录_r2_c2.gif" alt="11">
+					<input type="text" placeholder="请输入昵称">
+				</div>
+				<div class="input1">
+				<img src="image/美食美刻-登录_r2_c3.gif" alt="111">
+				<input type="password" placeholder="密码">
+				</div>
+				<div class="text1">
+					<img src="image/美食美刻-登录_r2_2.gif" alt=""><a href="#">忘记密码</a><a href="#" class="atb">自动登录？</a>
+				</div>
+				<div class="niu"><a href="">登录</a></div>
+				<a href="#" class="aaa">其他问题</a>
+				<div class="ditt">
+					<a href="#"><img src="image/QQ.png" alt="11">&nbsp;&nbsp;&nbsp;腾讯登录</a>
+					<a href="#" class="tbab"><img src="image/sina.png" alt="">&nbsp;&nbsp;微博登录</a>
+					<a href="#" class="tbaa"><img src="image/美食美刻-登录_r2_c4.gif" alt="">&nbsp;&nbsp;邮箱注册</a>
+				</div>
+			</div>
+		</div>
+
+		
+
+
+
+		<div class="bottom">
+				<div class="content">
+					<div class="content1">
+						<p>中国，最大的菜谱库 <span class="span1">800,000</span> <span class="span2">篇</span></p>
+						<p>每月，用户访问量 <span class="span1">20,000,000</span> <span class="span2">次</span></p>
+						<p>每月，菜谱被浏览量 <span class="span1">36，000,000,000</span> <span class="span2">次</span></p>
+						<p>现在，这些数字还在不断的增长着，欢迎您来一起使用美食美刻</p>
+					</div>
+					<div class="content2">
+						<div class="content2-1">
+							<img src="image/未命名-25.fw.png" alt="">
+							<p>点击进入</p>
+							<p>爱美食网微博官网</p>
+						</div>
+						<div class="content2-1">
+							<img src="image/未命名-26.fw.png" alt="">
+							<p>点击进入</p>
+							<p>爱美食QQ空间</p>
+						</div>
+						<div class="content2-1" id="tb1">
+							<img src="image/未命名-27.fw.png" alt="">
+							<p>扫二维码添加</p>
+							<p>爱美食微信好友</p>
+						</div>
+						<div class="content2-1" id="tb2">
+							<img src="image/未命名-28.fw.png" alt="">
+							<p>扫二维码添加</p>
+							<p>下载吗爱美食手机客户端</p>
+						</div>
+					</div>
+				</div>
+		</div>
+
+	</div><!-- mian结束 -->
+</body>
+</html>

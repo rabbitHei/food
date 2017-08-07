@@ -1,0 +1,582 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style type="text/css">
+		*{
+			margin:0;
+			padding:0;
+			font-family: "微软雅黑";
+		}
+		li{
+			list-style: none;
+		}
+		a{
+			text-decoration: none;
+		}
+		body{
+			min-width: 1339px;
+		}
+		input{
+			outline: none;
+		}
+		.mian:after{
+			content: "";
+			height: 0;
+			line-height: 0;
+			visibility: hidden;
+			display: block;
+			clear: both;
+		}
+		.mian{
+			background-color: #FAE8C8;
+		}
+		.top{
+			height: 50px;
+			background-color: #E9E8E8;
+		}
+		.top-1{
+			width: 1000px;
+			height: 50px;
+			margin:0 auto;
+			
+		}
+		.top-1 p{
+			font:bold 15px/50px "微软雅黑";
+		}
+		.find{
+			height: 100px;
+			background-color: #C70202;
+		}
+		.find .find-1{
+			height: 100px;
+			width: 1000px;
+			margin:0 auto;
+		}
+		.find-1 .image{
+			float: left;
+		}
+		.find-1 input{
+			float: left;
+			width: 244px;
+			height: 30px;
+			margin-left:36px;
+			margin-top: 34px;
+			border-style: none;
+		}
+		.find-1 span{
+			float: left;
+			width: 58px;
+			height: 28px;
+			background-color: #FF0000;
+			margin-top: 34px;
+			border:1px solid white;
+			text-align: center;
+			line-height: 28px;
+			color: white;
+			font-size: 15px;
+		}
+		.find-1 a{
+			float: right;
+			margin-top: 34px;
+			line-height: 28px;
+			margin-left: 29px;
+			font-size: 12px;
+			color: white;
+		}
+		.find-1 #tba{
+			margin-left: 0px;
+		}
+		.find-1 #tbaq{
+			margin-left: 5px;
+		}
+		.find-1 #tbb{
+			margin-top: 38px;
+		}
+		.nav{
+			height: 77px;
+			background-color: #FFFFFF;
+		}
+		.nav-1{
+			width: 1000px;
+			height: 77px;
+			margin:0 auto;
+		}
+		.nav-1 li{
+			float: left;
+			font:18px/77px "微软雅黑";
+			font-weight:700;
+			margin-right: 20px;
+		}
+		.nav-1 li a{
+			color: #000000;
+		}
+		.nav-1 li a:hover{
+			color:#008000;
+		}
+		.bottom{
+			border-top:1px solid  #2F2F2F;
+			height: 314px;
+			background-color: #2F2F2F;
+			margin-top: 100px;
+		}
+		.bottom .content{
+			width: 1339px;
+			height: 281px;
+			margin:0 auto;
+			margin-top:11px;
+			background: url(image/未命名24.fw.png) no-repeat;
+		}
+		.bottom .content .content1{
+			width: 511px;
+			height: 241px;
+			margin-left: 170px;
+		/*	background-color: pink;*/
+			float: left;
+			margin-top: 40px;
+		}
+		.content .content1 p{
+			color: #B7B7B7;
+			line-height: 32px;
+		}
+		.content .content1 .span1{
+			color: #C83131;
+			font-size: 18px;
+		}
+		.content .content1 .span2{
+			font-size: 19px;
+		}
+		.content .content2{
+			width: 500px;
+			height: 154px;
+			float: left;
+		/*	background-color: red;*/
+			margin-top: 30px;
+		}
+		.content2 .content2-1{
+			width: 105px;
+			height: 154px;
+			float: left;
+			margin-right: 20px;
+			/*background-color: green;*/
+			text-align: center;
+		}
+		.content #tb1{
+			margin-right: 0px;
+		}
+		.content #tb2{
+			margin:0px;
+			width: 145px;
+		}
+		.content2-1 p{
+			font-size: 12px;
+			color: #666666;
+			margin-top: 4px;
+			line-height: 10px;
+			margin-left: -4px;
+		}
+		.biaoti{
+			height: 77px;
+			text-align: center;
+		}
+		.biaoti h3{
+			font-family: "微软雅黑";
+			line-height: 77px;
+			font-size: 28px;
+		}
+		.num{
+			height: 260px;
+		}
+		.num .num1{
+			height: 260px;
+			width: 1002px;
+			margin:0 auto;
+			padding: 0 56px 0 64px;
+			/*background-color: yellow;*/
+			position: relative;
+		}
+		.left{
+			width: 30px;
+			height: 98px;
+			float: left;
+			background: url(image/zuo.fw.png) no-repeat;
+			position: absolute;
+			top:50%;margin-top:-49px;left: 0px;
+		}
+		.right{
+			width: 30px;
+			height: 98px;
+			float: right;
+			background: url(image/you.fw.png) no-repeat;
+			position: absolute;
+			right:0px;top:50%;margin-top:-49px;
+		}
+		.num1 .middle{
+			width: 334px;
+			height: 260px;
+			float: left;
+			position: relative;
+		}
+		.num1 .tp1{
+			background: url(image/未命名-2.fw.png) no-repeat;
+		}
+		.num1 .tp2{
+			background: url(image/未命名-3.fw.png) no-repeat;
+		}
+		.num1 .tp3{
+			background: url(image/未命名-1.fw.png) no-repeat;
+			background-size: cover;
+		}
+		.middle .middle-in{
+			width: 334px;
+			height: 57px;
+			position: absolute;
+			bottom: 0px;
+			background-color: white;
+		}
+		.middle-in h3{
+			margin-top: 8px;
+			margin-left: 12px;
+		}
+		#biaoti{
+			margin-top: 15px;
+		}
+		.anniua{
+			width: 265px;
+			height: 3px;
+			margin:0 auto;
+			/*background-color: blue;*/
+			margin-top: 31px;
+		}
+		.anniua ul{
+			height: 3px;
+		}
+		.anniua li{
+			float: left;
+			width: 73px;
+			height: 3px;
+		}
+		.anniua  a{
+			float: left;
+			background-color: #C9C9C9;
+			width: 73px;
+			height: 3px;
+		}
+		.anniua #azuo{
+			margin-left: 23px;
+			margin-right: 23px;
+		}
+		.anniua a:hover{
+			background-color: red;
+		}
+		.zaocang{
+			width: 997px;
+			height: 259px;
+			margin:0 auto;
+			background-color: white;
+			margin-top: 33px;
+		}
+		.zaocang1{
+			width: 101px;
+			height: 259px;
+			float: left;
+		}
+		.zaocang1 h2{
+			margin-top: 12px;
+			margin-left:16px;
+			font-weight: 400;
+		}
+		.zaocang1 p{
+			margin-top: 12px;
+			margin-left: 16px;
+			font-size: 12px;
+			color: #999999;
+		}
+		.zaocang2-3{
+			width: 896px;
+			height: 259px;
+			float: left;
+			/*background-color: red;*/
+		}
+		.zaocang2{
+			width: 896px;
+			height: 56px;
+			/*background-color: pink;*/
+		}
+		.zaocang2 p{
+			font-size: 12px;
+			color: #999999;
+			line-height: 56px;
+			float: right;
+			margin-right: 30px;
+		}
+		.zaocang2 span{
+			color: #FF0000;
+		}
+		.zaocang3{
+			height: 149px;
+		}
+		#caipu{
+			float: left;
+			width: 100px;
+		}
+		.yema{
+			width: 998px;
+			height: 64px;
+			margin: 0 auto;
+			margin-top: 55px;
+			/*background-color: pink;*/
+		}
+		.yema ul{
+			float: left;
+			width: 423px;
+			height: 64px;
+		}
+		.yema li{
+			width: 64px;
+			height: 64px;
+			float: left;
+			margin-left: 1px;
+		}
+		.yema a{
+			display: inline-block;
+			width: 64px;
+			height: 64px;
+			text-align: center;
+			line-height: 64px;
+			background-color: #F5F5F5;
+			color: #797A8E;
+			font-size: 20px;
+
+		}
+		.yema #tba1{
+			width: 100px;
+			margin-left: 47px;
+		}
+		.yema a:hover{
+			background-color: #FF3232;
+			color: white;
+		}
+		#yema-li{
+			margin-left: 99px;
+		}
+		.yema input{
+			width: 64px;
+			height: 64px;
+			border:none;
+			/*position: absolute;*/
+			text-align: center;
+			font-size: 20px;
+			color: #797A8E;
+		}
+		.yema .span{
+			/*margin-left: 66px;*/
+		}
+	</style>
+</head>
+<body>
+	<div class="mian">
+		
+		<div class="top">
+			<div class="top-1"><p>您好，欢迎来到美食杰网！</p></div>
+		</div>
+
+		<div class="find">
+			<div class="find-1">
+				<img src="image/logo.png" alt="" class="image">				
+				<input type="text" placeholder="请输入菜谱/食材/菜单"><span>搜索</span>
+				<a href="">登录</a>
+				<a href="">注册</a>
+				<a href="" id="tba">微博登录</a>
+				<a href="" id="tbb"><img src="image/sina.png" alt=""></a>
+				<a href="" id="tbaq">QQ登录</a>
+				<a href="" id="tbb"><img src="image/QQ.png" alt=""> </a>
+			</div>
+		</div>
+		
+		<div class="nav">
+			<div class="nav-1">
+				<ul>
+					<li><a href="#">首页</a></li>
+					<li><a href="#">菜谱大全</a></li>
+					<li><a href="#">饮食健康</a></li>
+					<li><a href="#">家居馆</a></li>
+					<li><a href="#">美食达人</a></li>
+					<li><a href="#">讨论组</a></li>
+					<li><a href="#">手机版下载</a></li>
+				</ul>
+			</div>
+		</div>
+		
+<!-- 起始位置 -->
+		<div class="biaoti" id="biaoti">
+				<h3>5月，立夏须养心</h3>	
+		</div>	
+
+		<div class="num">
+			<div class="num1">
+				<div class="left"></div>				
+				<div class="middle tp1">
+					<div class="middle-in">
+						<h3>四月水果当季尝</h3>
+						<p>&nbsp;&nbsp;你舍得错过当季这些甜美的果实吗？</p>
+					</div>
+				</div>
+				<div class="middle tp2">
+					<div class="middle-in">
+						<h3>鲜花菜肴</h3>
+						<p>&nbsp;&nbsp;来，让人间芬芳--开遍你的餐桌</p>
+					</div>
+				</div>
+				<div class="middle tp3">
+					<div class="middle-in">
+						<h3>中式下午茶</h3>
+						<p>&nbsp;&nbsp;理想的下午，在家喝出女王范</p>
+					</div>
+				</div>
+				<div class="right"></div>
+			</div>
+		</div>
+
+		<div class="anniua">
+			<ul>
+				<li><a href="#"></a></li>
+				<li id="azuo"><a href="#" ></a></li>
+				<li><a href="#"></a></li>
+			</ul>
+		</div>
+
+		<div class="biaoti" id="biaoti">
+				<h3>菜单是你一桌饭</h3>	
+		</div>
+
+		<div class="zaocang">
+			<div class="zaocang1">
+				<h2>早餐</h2>
+				<p>23分钟前</p>
+			</div>
+			<div class="zaocang2-3">
+				<div class="zaocang2">
+					<p><span>11</span>篇菜谱</p>
+				</div>
+				<div class="zaocang3">
+					<img src="image/未命名-29.fw.png" alt=""><img src="image/未命名-30.fw.png" alt=""><img src="image/未命名-31.fw.png" alt="" style="margin-left: -2px;"><img src="image/未命名-32.fw.png" alt="">
+				</div>
+			</div>
+		</div>
+
+<!-- 家常菜	 --><div class="zaocang">
+			<div class="zaocang1">
+				<h2>家常菜</h2>
+				<p>27分钟前</p>
+			</div>
+			<div class="zaocang2-3">
+				<div class="zaocang2">
+					<p><span>13</span>篇菜谱</p>
+				</div>
+				<div class="zaocang3">
+					<img src="image/未命名-33.fw.png" alt=""><img src="image/未命名-34.fw.png" alt=""><img src="image/未命名-35.fw.png" alt=""><img src="image/未命名-36.fw.png" alt="">
+				</div>
+			</div>
+				</div>
+
+<!-- 热菜 --><div class="zaocang">
+			<div class="zaocang1">
+				<h2>热菜</h2>
+				<p>35分钟前</p>
+			</div>
+			<div class="zaocang2-3">
+				<div class="zaocang2">
+					<p><span>17</span>篇菜谱</p>
+				</div>
+				<div class="zaocang3">
+					<img src="image/未命名-37.fw.png" alt=""><img src="image/未命名-38.fw.png" alt=""><img src="image/未命名-39.fw.png" alt=""><img src="image/未命名-40.fw.png" alt="">
+				</div>
+			</div>
+			</div>
+
+<!-- 甜品--><div class="zaocang">
+			<div class="zaocang1">
+				<h2>甜品</h2>
+				<p>18分钟前</p>
+			</div>
+			<div class="zaocang2-3">
+				<div class="zaocang2">
+					<p><span>15</span>篇菜谱</p>
+				</div>
+				<div class="zaocang3">
+					<img src="image/未命名-41.fw.png" alt=""><img src="image/未命名-42.fw.png" alt=""><img src="image/未命名-43.fw.png" alt=""><img src="image/未命名-44.fw.png" alt="">
+				</div>
+			</div>
+			</div>
+
+<!-- 我的菜谱 --><div class="zaocang">
+			<div class="zaocang1">
+				<h2 id="caipu">我的菜单</h2>
+				<p id="caipu">34分钟前</p>
+			</div>
+			<div class="zaocang2-3">
+				<div class="zaocang2">
+					<p><span>10</span>篇菜谱</p>
+				</div>
+				<div class="zaocang3">
+					<img src="image/未命名-45.fw.png" alt=""><img src="image/未命名-46.fw.png" alt=""><img src="image/未命名-47.fw.png" alt=""><img src="image/未命名-48.fw.png" alt="">
+				</div>
+			</div>
+			</div>
+
+			<div class="yema">
+				<ul>
+					<li id="yema-li"><a href="">1</a></li>
+					<li><a href="">2</a></li>
+					<li><a href="">3</a></li>
+					<li><a href="">4</a></li>
+					<li><a href="">5</a></li>
+				</ul>
+				<span>&nbsp;&nbsp;&nbsp;&nbsp;....</span>
+				<a href="#" id="tba1">下一页</a>
+				<span>&nbsp;&nbsp;&nbsp;共94727页，到第&nbsp;&nbsp;</span>
+				<input type="text" placeholder="1">
+				<span class="span">&nbsp;&nbsp;页</span>
+				<a href="">确定</a>
+			</div>
+
+
+
+		<div class="bottom">
+				<div class="content">
+					<div class="content1">
+						<p>中国，最大的菜谱库 <span class="span1">800,000</span> <span class="span2">篇</span></p>
+						<p>每月，用户访问量 <span class="span1">20,000,000</span> <span class="span2">次</span></p>
+						<p>每月，菜谱被浏览量 <span class="span1">36，000,000,000</span> <span class="span2">次</span></p>
+						<p>现在，这些数字还在不断的增长着，欢迎您来一起使用美食美刻</p>
+					</div>
+					<div class="content2">
+						<div class="content2-1">
+							<img src="image/未命名-25.fw.png" alt="">
+							<p>点击进入</p>
+							<p>爱美食网微博官网</p>
+						</div>
+						<div class="content2-1">
+							<img src="image/未命名-26.fw.png" alt="">
+							<p>点击进入</p>
+							<p>爱美食QQ空间</p>
+						</div>
+						<div class="content2-1" id="tb1">
+							<img src="image/未命名-27.fw.png" alt="">
+							<p>扫二维码添加</p>
+							<p>爱美食微信好友</p>
+						</div>
+						<div class="content2-1" id="tb2">
+							<img src="image/未命名-28.fw.png" alt="">
+							<p>扫二维码添加</p>
+							<p>下载吗爱美食手机客户端</p>
+						</div>
+					</div>
+				</div>
+		</div>
+
+	</div><!-- mian结束 -->
+</body>
+</html>

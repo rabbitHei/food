@@ -1,0 +1,55 @@
+/*初始化 S*/
+html,body,ul,li,p,h1,h2,h3,form,img,input
+	{
+	margin:0;
+	padding:0;
+}
+img{
+	border:0;
+}
+li{
+	list-style: none;
+}
+a{
+	text-decoration: none;
+}
+input{
+	padding-top: 0;
+	padding-bottom: 0;
+	outline: none;
+}
+body{
+	font: normal 400 12px "微软雅黑";
+	background-color: #fff;
+}
+h1, h2, h3 {
+	font-weight: normal;
+	font-size: 12px;
+}
+/*初始化 E*/
+/*common部分 S*/
+.clearfix:after{
+	content: "";
+	height: 0;
+	line-height: 0;
+	display: block;
+	visibility: hidden;
+	clear: both;
+}
+.clearfix{
+	zoom:1;
+}
+.fl{
+	float: left;
+}
+.fr{
+	float: right;
+}
+
+.ta{
+	text-align: center;
+}
+.va{
+	vertical-align: middle;
+}
+/*common部分 E*/
